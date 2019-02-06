@@ -6,3 +6,6 @@ ssh -i amolbandal.pem ubuntu@ec2-54-153-247-55.ap-southeast-2.compute.amazonaws.
 scp -i ~/Downloads/amolec2.pem aws-commands ubuntu@13.233.174.149:~/
 
 ssh -i ~/Downloads/amolec2.pem ubuntu@13.233.141.32
+
+
+rsync -avL --progress -e "ssh -i ~/Downloads/amolec2.pem" /home/ajaynadargi/Rental-API/controller/admin.js ubuntu@13.233.141.32:/home/ubuntu/Rental-API/controller/
